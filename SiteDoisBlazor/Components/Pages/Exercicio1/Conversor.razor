@@ -1,0 +1,30 @@
+@page "/conversor"
+@rendermode InteractiveServer
+
+<PageTitle>Conversor de Temperatura</PageTitle>
+
+<div class="cartao">
+    <h1>Conversor de Temperatura</h1>
+    <p>Informe uma temperatura em Celsius para converter para Fahrenheit.</p>
+
+    <div class="campo-formulario">
+        <label for="celsius">Temperatura em Celsius:</label>
+        <input id="celsius" type="number" step="any" @bind="celsius" />
+    </div>
+
+    <button class="botao-principal" @onclick="Converter">Converter</button>
+
+    <div class="resultado">
+        Temperatura em Fahrenheit: <strong>@fahrenheit.ToString("F2") °F</strong>
+    </div>
+</div>
+
+@code {
+    private double celsius;
+    private double fahrenheit;
+
+    private void Converter()
+    {
+        fahrenheit = (celsius * 9 / 5) + 32;
+    }
+}

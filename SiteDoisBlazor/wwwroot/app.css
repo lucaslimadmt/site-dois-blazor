@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #252525;
+}
+
+.pagina {
+    min-height: 100vh;
+    display: flex;
+}
+
+.menu-lateral {
+    width: 240px;
+    min-height: 100vh;
+    background: #1f2937;
+    color: white;
+    padding: 24px 14px;
+}
+
+.titulo-menu {
+    padding: 0 12px 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 18px;
+}
+
+.titulo-menu strong {
+    display: block;
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+}
+
+.titulo-menu span {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.nav-item {
+    margin-bottom: 7px;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #374151;
+    color: white;
+}
+
+.conteudo-principal {
+    flex: 1;
+    padding: 42px;
+}
+
+.cartao {
+    max-width: 720px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.lista-exercicios {
+    margin: 24px 0;
+    padding: 12px 18px;
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 20px 0;
+    max-width: 340px;
+}
+
+.campo-formulario label {
+    font-weight: bold;
+}
+
+.campo-formulario input {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.botao-principal {
+    margin-top: 5px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.botao-principal:hover {
+    background: #1d4ed8;
+}
+
+.resultado,
+.numero-sorteado {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 7px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.numero-sorteado h2 {
+    margin: 8px 0 0;
+    font-size: 2.4rem;
+}
+
+.aprovado {
+    color: green;
+    margin-bottom: 0;
+}
+
+.reprovado {
+    color: red;
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    .pagina {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .conteudo-principal {
+        padding: 20px;
+    }
+}
